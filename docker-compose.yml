@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+
+  mongo:
+      image: mongo
+      volumes:
+          - ./data:/data/db
+
+  node:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    expose:
+      - 3000
+
+networks:
+    default:
+        external:
+            name: nginx-reverse-proxy_default
