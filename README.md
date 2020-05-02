@@ -10,4 +10,10 @@ Create and run:
 docker-compose up -d
 ```
 
+Run npm command from the host:
+
+```sh
+docker container exec <container name or id> npm <command>
+```
+
 If you use nginx proxy, change the docker network name in the docker-compose.yml.
