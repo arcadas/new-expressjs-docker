@@ -3,6 +3,8 @@ version: "2"
 services:
   mongo:
     build: ./mongo
+    networks:
+      - proxy
     volumes:
       - ./data:/data/db
 
