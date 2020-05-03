@@ -4,6 +4,8 @@ You can create a new Express.js project in a fully dockerized development enviro
 
 Requirements: `Docker`
 
+The mongo container contains the TylerBrock/mongo-hacker package.
+
 Create and run:
 
 ```sh
@@ -17,8 +19,9 @@ docker container exec <container name or id> npm <command>
 ```
 
 Run mongo command:
+
 ```sh
-docker container exec -it new-expressjs-docker_mongo_1 /bin/bash
+docker container exec -it <container name or id> /bin/bash
 mongo
 ```
 
