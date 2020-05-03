@@ -16,4 +16,10 @@ Run npm command from the host:
 docker container exec <container name or id> npm <command>
 ```
 
+Run mongo command:
+```sh
+docker container exec -it new-expressjs-docker_mongo_1 /bin/bash
+mongo
+```
+
 If you use nginx proxy, change the docker network name in the docker-compose.yml.
